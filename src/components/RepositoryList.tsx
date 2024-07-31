@@ -6,7 +6,13 @@ import "../styles/repositories.scss";
 //https://api.github.com/users/willfra/repos
 
 export function RepositoryList() {
-    const [repositories, setRepositories] = useState([]);
+    const [repositories, setRepositories] = useState<Repository[]>([]);
+
+    interface Repository {
+        name: string;
+        description: string;
+        html_url: string;
+    }
 
     useEffect(() => {
         fetch("https://api.github.com/users/willfra/repos")
