@@ -23,8 +23,7 @@ export function RepositoryList() {
     return (
         <section className="repository-list">
             <h1>Lista de repositórios</h1>
-
-            <ul>
+            <div className="repository-list">
                 {repositories.map((repository) => {
                     return (
                         <RepositoryItem
@@ -33,7 +32,7 @@ export function RepositoryList() {
                         />
                     );
                 })}
-            </ul>
+            </div>
         </section>
     );
 }
